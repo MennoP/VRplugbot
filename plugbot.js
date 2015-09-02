@@ -1704,6 +1704,11 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
+						if (chat.message.indexOf("who is the best") > -1 || chat.message.indexOf("Who is the best") > -1 ){
+							var randomBall = Math.floor(Math.random() * basicBot.chat.anian.length);
+							API.sendChat(basicBot.chat.anian[randomBall]);
+							return void (0);
+						}
                             var crowd = API.getUsers();
                             var msg = chat.message;
                             var argument = msg.substring(cmd.length + 1).replace(/@/g, '');
