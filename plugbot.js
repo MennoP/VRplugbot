@@ -3720,7 +3720,7 @@
                         API.sendChat(basicBot.chat.guildies[i])
                     }
                 }
-            },
+            }
         }
     };
 
